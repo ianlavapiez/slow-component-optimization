@@ -2,20 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  @apply border-2 border-purple-700 bg-purple-100 p-2 placeholder-purple-400 accent-purple-600 shadow-sm transition-all ease-in invalid:border-red-800 invalid:bg-red-200 out-of-range:border-red-800 out-of-range:bg-red-200 hover:bg-purple-200 hover:accent-purple-700 focus:bg-purple-50 focus:outline-none disabled:border-slate-500 disabled:bg-slate-100 disabled:placeholder-slate-400;
+}
+
+label,
+p {
+  @apply leading-relaxed font-bold;
+}
+
+button {
+  @apply inline-flex items-center justify-center border-2 border-purple-700 bg-purple-100 px-4 py-2 transition-colors ease-in hover:bg-purple-200 active:bg-purple-300 disabled:opacity-50;
 }
