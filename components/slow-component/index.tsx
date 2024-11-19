@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import { block } from "@/lib";
 
 const SlowComponent: React.FC = () => {
@@ -13,4 +13,4 @@ const SlowComponent: React.FC = () => {
   );
 };
 
-export default SlowComponent;
+export default memo(SlowComponent);

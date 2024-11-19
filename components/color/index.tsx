@@ -9,7 +9,7 @@ import SlowComponent from "../slow-component";
 
 const Color: React.FC = () => {
   const [colorGuess, setColorGuess] = useState("");
-  const [correctAnswer, setCorrectAnswer] = useState(generateColor());
+  const [correctAnswer, setCorrectAnswer] = useState(() => generateColor());
   const [hasGuessed, setHasGuessed] = useState(false);
   const [isWinner, setIsWinner] = useState(false);
 
